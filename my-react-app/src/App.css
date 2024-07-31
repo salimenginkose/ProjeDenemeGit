@@ -1,0 +1,86 @@
+/* App.css */
+
+.App {
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px; /* Yükleme alanı için yeterli boşluk */
+}
+
+.container-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  width: 180px; /* Boyutu kısalttık */
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.upload-container {
+  position: fixed;
+  bottom: 100px; /* Sayfanın altından 20px yukarıda */
+  left: 50%;
+  transform: translateX(-50%); /* Ortalamak için */
+  text-align: center;
+  width: 300px; /* Uygun bir genişlik */
+}
+
+.upload-container input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.loading-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  height: 20px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  background-color: #4caf50; /* Yeşil renk */
+  border-radius: 4px;
+  transition: width 0.3s;
+}

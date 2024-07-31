@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+   
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+ 
+    <title>React App</title>
+    
+    <style>
+        .center-text {
+            text-align: center;
+            font-size: 3rem;
+        }
+    </style>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      // Renkler ve metin için JavaScript kodu
+      function getRandomColor() {
+          const letters = '0123456789ABCDEF';
+          let color = '#';
+          for (let i = 0; i < 6; i++) {
+              color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+      }
+
+      function applyRainbowEffect() {
+          const textElement = document.getElementById('rainbow-text');
+          const text = textElement.textContent;
+          textElement.innerHTML = text.split('').map((char, i) => 
+              `<span style="color: ${getRandomColor()};">${char}</span>`
+          ).join('');
+      }
+
+      // Her 100ms'de renk değişimi yapacak şekilde ayarla
+      setInterval(applyRainbowEffect, 100);
+  </script>
+
+
+    <p class="center-text" id="rainbow-text" >Abbas SaviQ</p>
+
+    <noscript>You need to enable Jav aScript to run this app.</noscript>
+    <div id="root"></div>
+ 
+  </body>
+</html>
